@@ -1,0 +1,464 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1F1E24;
+    background-image: url('/public/background-peliculas.jpg');
+    background-size:contain;
+    background-position: center;
+    background-repeat:repeat;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.header {
+    background-color: #181D22;
+    color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 2px -2px rgb(12, 8, 24);
+}
+
+.header img {
+    height: 100px;
+    padding: 5px 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    color:  #E5D902;
+}
+
+.h2-title {
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: #181818;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #181D22;
+}
+
+th {
+    background-color: #E5D902;
+    color: #181D22;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.add-button, button {
+    background-color: #269F42;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+.add-button:hover, button:hover {
+    opacity: 0.8;
+}
+
+.action-button {
+    background-color: #269F42;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+.delete-button {
+    background-color:#e50914;
+    color: white;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.movie-name {
+    color: #181818;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .movie-name:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 -2px 2px -2px gray;
+    overflow: hidden;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+input[type="text"], input[type="number"], input[type="url"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="url"]:focus, textarea:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-button {
+    background-color: #269F42;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.form-button:hover {
+    opacity: 0.8;
+}
+
+.label {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.movie-detail-container {
+    text-align: center; 
+    padding: 20px;
+    color: #fff; 
+  }
+  
+
+  .movie-text{
+    width: 60%;
+    margin:  0 auto;
+    padding: 30px;
+    font-size: 15pt;
+    background-color: #181D22;
+  }
+
+  .movie-poster {
+    max-width: 40%;
+    height: auto; 
+    margin: 0 auto;
+    display: block;
+    padding: 30px;
+    background-color: #181D22;
+
+  }
+  
+  .movie-video {
+    width: 60%; 
+    height: 500px; 
+   
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #181D22;
+
+  }
+
+.container {
+    background-color: #181D22;
+    color: white; 
+    padding: 40px 20px; 
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; 
+    padding: 20px;
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.movie-card:hover {
+    transform: scale(1.05); 
+}
+
+.movie-card img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.movie-card h3 {
+    text-align: center !important; 
+    margin-top: 10px; 
+    font-size: 1.2em; 
+    margin-bottom: 10px;
+    color: white;
+}
+
+h1, p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+  
+.table-responsive {
+    overflow-x: hidden; 
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #E5D902;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.buttons-container {
+
+    text-align: center;
+    padding: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #181D22;
+}
+
+.edit-button {
+    background-color: #269F42;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.return-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.return-button:hover {
+    background-color: #0056b3;
+}
+
+.edit-button:hover:hover {
+    background-color: #17792e;
+}
+
+.trailer-text{
+    color: #E5D902;
+    font-size: 20pt;
+    font-weight: bold;
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #181D22;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    footer p {
+        font-size: 14px; 
+        padding: 0 10px;
+    }
+}
+@media (max-width: 768px) {
+    .movie-video {
+      height: 300px; 
+    }
+  }
